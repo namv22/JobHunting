@@ -28,7 +28,7 @@ public class JobsRecyclerViewAdapter extends RecyclerView.Adapter<JobsRecyclerVi
     private FirebaseAuth mAuth;
 
 
-    public JobsRecyclerViewAdapter(List<Jobs> jobsList, Context context, FirebaseFirestore firebaseFirestore, FirebaseAuth mAuth){
+    public JobsRecyclerViewAdapter(List<Jobs> jobsList, Context context, FirebaseFirestore firebaseFirestore, FirebaseAuth mAuth) {
         this.jobsList = jobsList;
         this.context = context;
         this.firebaseFirestore = firebaseFirestore;
@@ -48,6 +48,8 @@ public class JobsRecyclerViewAdapter extends RecyclerView.Adapter<JobsRecyclerVi
         final Jobs job = jobsList.get(itemPosition);
         holder.title.setText(job.getTitle());
         holder.company.setText(job.getCompany());
+        holder.salary.setText(job.getSalary());
+        holder.description.setText(job.getDescription());
 
         holder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,17 +66,19 @@ public class JobsRecyclerViewAdapter extends RecyclerView.Adapter<JobsRecyclerVi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView title, company, edit;
+        TextView title, company, salary, description, edit;
 
         ViewHolder(View view) {
             super(view);
             title = view.findViewById(R.id.tvTitle);
             company = view.findViewById(R.id.Company);
+            salary = view.findViewById(R.id.Salary);
+            description = view.findViewById(R.id.Description);
             edit = view.findViewById(R.id.applyJobs);
         }
     }
 
-    private void deleteJobsApplied(String id, String approval, String email,String company, String job, int position){
+    private void deleteJobsApplied(String id, String approval, String email, String company, String job, int position) {
         Map<String, Object> job_apply = new HashMap<>();
         job_apply.put("approval", approval);
         job_apply.put("email", email);

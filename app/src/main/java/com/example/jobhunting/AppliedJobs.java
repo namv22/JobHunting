@@ -5,14 +5,19 @@ public class AppliedJobs {
     private String company;
     private String email;
     private String approval;
+    private String salary;
+    private String description;
 
-    public AppliedJobs(){};
+    public AppliedJobs() {
+    }
 
-    public AppliedJobs(String title, String company, String email, String approval) {
+    public AppliedJobs(String title, String company, String email, String approval, String salary, String description) {
         this.title = title;
         this.company = company;
         this.email = email;
         this.approval = approval;
+        this.salary = salary;
+        this.description = description;
     }
 
     public String getTitle() {
@@ -45,5 +50,21 @@ public class AppliedJobs {
 
     public void setApproval(String approval) {
         this.approval = approval;
+    }
+
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

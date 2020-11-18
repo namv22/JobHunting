@@ -17,7 +17,7 @@ public class ApplyJobViewAdapter extends RecyclerView.Adapter<ApplyJobViewAdapte
     private List<AppliedJobs> jobsList;
     private Context context;
 
-    public ApplyJobViewAdapter(List<AppliedJobs> jobsList, Context context){
+    public ApplyJobViewAdapter(List<AppliedJobs> jobsList, Context context) {
         this.jobsList = jobsList;
         this.context = context;
     }
@@ -35,6 +35,8 @@ public class ApplyJobViewAdapter extends RecyclerView.Adapter<ApplyJobViewAdapte
         final AppliedJobs job = jobsList.get(itemPosition);
         holder.title.setText(job.getTitle());
         holder.company.setText(job.getCompany());
+        holder.salary.setText(job.getSalary());
+        holder.description.setText(job.getDescription());
         holder.edit.setText("APPLIED");
     }
 
@@ -44,12 +46,14 @@ public class ApplyJobViewAdapter extends RecyclerView.Adapter<ApplyJobViewAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView title, company, edit;
+        TextView title, company, salary, description, edit;
 
         ViewHolder(View view) {
             super(view);
             title = view.findViewById(R.id.tvTitle);
             company = view.findViewById(R.id.Company);
+            salary = view.findViewById(R.id.Salary);
+            description = view.findViewById(R.id.Description);
             edit = view.findViewById(R.id.applyJobs);
         }
     }

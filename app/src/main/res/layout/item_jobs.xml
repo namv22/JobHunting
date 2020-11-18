@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:padding="10dp"
     android:weightSum="10">
 
@@ -19,11 +19,24 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:text="Title"
-            android:textColor="@color/colorPrimary"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/Company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Text for Content" />
+
+        <TextView
+            android:id="@+id/Salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Text for Content" />
+
+        <TextView
+            android:id="@+id/Description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
@@ -33,8 +46,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_marginTop="22dp"
+        android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -42,7 +55,7 @@
             android:id="@+id/applyJobs"
             android:layout_width="60dp"
             android:layout_height="match_parent"
-            android:text="APPLY"/>
+            android:text="APPLY" />
     </LinearLayout>
 
 </LinearLayout>
