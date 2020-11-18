@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JobHunting">
-        <activity android:name=".ActivityRegister"
-            android:theme="@style/Theme.Design.NoActionBar">
-        </activity>
+        <activity android:name=".AppliedJobActivity"
+            android:theme="@style/Theme.Design.Light"></activity>
+        <activity
+            android:name=".ActivityRegister"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
         <activity
             android:name=".ActivityLogin"
             android:theme="@style/Theme.Design.NoActionBar">
@@ -21,8 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:theme="@style/Theme.Design.Light"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Design.Light" />
     </application>
 
 </manifest>
